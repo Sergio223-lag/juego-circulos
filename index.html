@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego del círculo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="puntos">Puntos: 0</div>
+    <div id="tiempo">Tiempo: 10</div>
+
+    <button id="pausa">⏸️</button>
+
+    <div id="configuracion">
+        <label for="tiempoElegido">Tiempo:</label>
+
+        <input
+            type="number"
+            id="tiempoElegido"
+            value="10"
+            min="1"
+        >
+
+        <span>segundos</span>
+    </div>
+
+    <button id="empezar">Empezar</button>
+
+    <div id="boton"></div>
+
+
+    <!-- RECORDS -->
+
+    <div id="records">
+
+        <h2>🏆 TOP 3</h2>
+
+        <ol id="listaRecords">
+            <li>🥇 0 puntos</li>
+            <li>🥈 0 puntos</li>
+            <li>🥉 0 puntos</li>
+        </ol>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- PANTALLA DEL ANUNCIO -->
+    <!-- ========================= -->
+
+    <div id="pantallaAnuncio">
+
+        <div id="anuncio">
+
+            <h1>📺 ¡Última oportunidad!</h1>
+
+            <p>
+                Mira un anuncio y consigue
+            </p>
+
+            <strong>+10 segundos</strong>
+
+            <button id="verAnuncio">
+                📺 Ver anuncio +10s
+            </button>
+
+            <div id="contadorAnuncio">
+                3
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- PANTALLA DE RESULTADOS -->
+    <!-- ========================= -->
+
+    <div id="pantallaResultados">
+
+        <div id="resultados">
+
+            <h1>🏆 Partida terminada</h1>
+
+            <div id="mensajeRecord"></div>
+
+            <div class="resultadoDato">
+                ⭐ Puntuación
+                <strong id="resultadoPuntos">0</strong>
+            </div>
+
+            <div class="resultadoDato">
+                🔥 Mejor racha
+                <strong id="resultadoRacha">0</strong>
+            </div>
+
+            <div class="resultadoDato">
+                🎯 Aciertos
+                <strong id="resultadoAciertos">0</strong>
+            </div>
+
+            <div class="resultadoDato">
+                💣 Bombas pulsadas
+                <strong id="resultadoBombas">0</strong>
+            </div>
+
+            <div id="botonesFinal">
+
+                <button id="jugarOtra">
+                    🔄 Jugar otra vez
+                </button>
+
+                <button id="ajustes">
+                    ⚙️ Ajustes
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ========================= -->
+    <!-- PANTALLA DE AJUSTES -->
+    <!-- ========================= -->
+
+    <div id="pantallaAjustes">
+
+        <div id="panelAjustes">
+
+            <h1>⚙️ Ajustes</h1>
+
+            <div class="ajuste">
+
+                <label for="tiempoAjustes">
+                    ⏱️ Tiempo de partida
+                </label>
+
+                <input
+                    type="number"
+                    id="tiempoAjustes"
+                    min="1"
+                    value="10"
+                >
+
+                <span>segundos</span>
+
+            </div>
+
+            <div class="ajuste">
+
+                <label for="velocidad">
+                    ⚡ Velocidad de desaparición
+                </label>
+
+                <select id="velocidad">
+
+                    <option value="2000">
+                        🐢 Lenta
+                    </option>
+
+                    <option value="1500">
+                        🚶 Normal-lenta
+                    </option>
+
+                    <option value="1000" selected>
+                        ⚡ Normal
+                    </option>
+
+                    <option value="700">
+                        🔥 Rápida
+                    </option>
+
+                    <option value="400">
+                        💨 Muy rápida
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="ajuste checkbox">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="activarBombas"
+                        checked
+                    >
+
+                    💣 Bombas
+
+                </label>
+
+            </div>
+
+            <div class="ajuste checkbox">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="activarDoble"
+                        checked
+                    >
+
+                    ✖️ Círculos ×2
+
+                </label>
+
+            </div>
+
+            <div class="ajuste checkbox">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        id="activarTiempo"
+                        checked
+                    >
+
+                    ⏰ Círculos +3s
+
+                </label>
+
+            </div>
+
+            <div id="botonesAjustes">
+
+                <button id="guardarAjustes">
+                    💾 Guardar
+                </button>
+
+                <button id="volverResultados">
+                    ↩️ Volver
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
